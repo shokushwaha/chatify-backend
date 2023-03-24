@@ -11,7 +11,7 @@ var server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: process.env.BASE_URL,
+        origin: 'https://chatifyy-shobhit.netlify.app',
         methods: ["GET", "POST"]
     }
 });
@@ -32,6 +32,6 @@ io.on("connection", (socket) => {
 
 });
 
-const PORT = process.env.PORT || 6010
+const PORT = 5000 || 6010
 
 server.listen(PORT, console.log(`App started at port ${PORT}`)) 
